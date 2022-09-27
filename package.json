@@ -11,9 +11,12 @@
     "commit": "git pull && git add . && git cz && git push"
   },
   "lint-staged": {
-    "*.{ts,js,vue}": [
-      "eslint --fix",
-      "git add ."
+    "*.{js,vue,ts,jsx,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{html,css,less,scss,md}": [
+      "prettier --write"
     ]
   },
   "dependencies": {
